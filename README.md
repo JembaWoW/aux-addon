@@ -1,53 +1,71 @@
-# aux - WoW 1.12 AddOn
+# aux - WoW 1.12 AddOn (Nyctermoon Edition)
 
 The most advanced auction house addOn for the 1.12 client with some features more advanced than anything even on retail.
 
-## Core Features
+Enhanced features added for the Nyctermoon private server: On Nyctermoon, a custom Marketer script will buy any item at white or better quality for 2x the vendor price if listed for 24 hours on the AH, which is the primary way to make gold on the server. These changes add some quality of life features by building on the default tweaked Aux addon posted in the Nyctermoon discord server so that it's easier to quickly post items from your inventory for the 2x vendor default (which is what all items are initially set at) and to hide or unhide items from the posting list.
+
+## Custom Added Features for Nyctermoon
+
+- **Ctrl + Left Click** on an item in the posting list will post it with default 2x vendor price settings for 24hr auction time.
+- **Shift + Left Click** on an item in the posting list will hide or unhide it.
+- "Post" is now the default tab when you open aux.
+- Posting items now prints a chat message to confirm what item you posted with the quantity and price (as a double check to make sure you're posting only things you want to sell at the correct prices).
+- _Bugfix:_ aux no longer displays the wrong item price when clicking on items in the post window.
+
+## Original Core Features
 
 ### General
-* Completely independent replacement for the Blizzard interface.
-* Elegant look based on the retail addOn TSM.
-* Many convenient shortcuts.
-* Convenient access to the unaltered Blizzard interface.
+
+- Completely independent replacement for the Blizzard interface.
+- Elegant look based on the retail addOn TSM.
+- Many convenient shortcuts.
+- Convenient access to the unaltered Blizzard interface.
 
 ### Search
-* Automatic scanning of all pages for a query.
-* Saving of recent and favorite queries.
-* History of result listings with internet browser-like interface.
-* Advanced search filters which can be combined with logical operators.
-* Autocompletion for entering filters.
-* Concise listings cleary showing the most important information.
-* Sorting by percentage of historical value and unit price.
-* Sorting across all scanned pages.
-* Quick buying from any page without rescanning everything.
-* Real time mode which continuously scans the last page.
+
+- Automatic scanning of all pages for a query.
+- Saving of recent and favorite queries.
+- History of result listings with internet browser-like interface.
+- Advanced search filters which can be combined with logical operators.
+- Autocompletion for entering filters.
+- Concise listings cleary showing the most important information.
+- Sorting by percentage of historical value and unit price.
+- Sorting across all scanned pages.
+- Quick buying from any page without rescanning everything.
+- Real time mode which continuously scans the last page.
 
 ### Post
-* Automatic assembling and posting of multiple stacks.
-* Automatic scanning of existing auctions.
-* Concise listing of existing auctions.
-* Undercutting of existing auctions by click.
-* Concise listing of inventory items excluding the non auctionable.
-* Manual exclusion of specific items from the inventory listing.
-* Saving post configuration per item.
-* Efficient price input inspired by the retail addOn TSM.
+
+- Automatic assembling and posting of multiple stacks.
+- Automatic scanning of existing auctions.
+- Concise listing of existing auctions.
+- Undercutting of existing auctions by click.
+- Concise listing of inventory items excluding the non auctionable.
+- Manual exclusion of specific items from the inventory listing.
+- Saving post configuration per item.
+- Efficient price input inspired by the retail addOn TSM.
 
 ### History
-* Automatic gathering of historical data from all scans.
-* Automatic collection of vendor prices.
-* Intricate calculations for a reliable historical value.
-* Tooltip with historical value, vendor prices and disenchant value.
-* Efficient storage of data.
+
+- Automatic gathering of historical data from all scans.
+- Automatic collection of vendor prices.
+- Intricate calculations for a reliable historical value.
+- Tooltip with historical value, vendor prices and disenchant value.
+- Efficient storage of data.
 
 ## Slash Commands
+
 ### General
+
 **/aux** (Lists the settings)<br/>
 **/aux scale _factor_** (Scales the aux GUI by _factor_)<br/>
 **/aux ignore owner** (Disables waiting for owner names when scanning. Recommended)<br/>
 **/aux post bid** (Adds a bid price listing to the post tab)<br/>
 **/aux crafting cost** (Toggles the crafting price information)<br/>
 **/aux post duration _hours_** (Sets the default auction duration to _2_/_8_/_24_ hours)<br/>
+
 ### Tooltip
+
 **/aux tooltip value**<br/>
 **/aux tooltip daily**<br/>
 **/aux tooltip disenchant value**<br/>
@@ -56,8 +74,11 @@ The most advanced auction house addOn for the 1.12 client with some features mor
 **/aux tooltip vendor sell**<br/>
 
 ## Usage
+
 ### General
+
 For the auction listings in the search, auctions and bids tabs the following shortcuts are available.
+
 - Double-click on a row with blue colored count to expand it.
 - Alt-left-click on the selected row for buyout/cancel.
 - Alt-right-click on the selected row for bid/cancel.
@@ -68,20 +89,26 @@ For the auction listings in the search, auctions and bids tabs the following sho
 - Right-click on a header of a price column to switch between unit and stack price.
 
 Furthermore
+
 - Double-click in editboxes will highlight everything.
 
 ### Search
+
 - Hitting tab in the search box will accept an autocompletion.
 - Dragging inventory items to the search box or right-clicking them will start a search.
 - Right-clicking item links will start a search.
 
 #### Search Results
+
 ![Alt text](http://i.imgur.com/hI6ODqM.png)
+
 - Bid prices for your own active bids are colored in green.
 - Bid prices for other auctions with an active bid are colored in orange.
 
 #### Saved Searches
+
 ![Alt text](http://i.imgur.com/dICDnxR.png)
+
 - When hovering over an entry the tooltip shows a longer and more nicely formatted version.
 - Left-click on an entry will start a search.
 - Right-click on an entry will show a menu with various options, including toggling Auto Buy.
@@ -89,11 +116,15 @@ Furthermore
 - Shift-right-click on an entry will add a search to the existing query in the search box.
 
 #### Filter Builder
+
 ![Alt text](http://i.imgur.com/8hilZc9.png)
 While it is faster to type filters directly into the search box this sub-tab serves as a tutorial to learn how to formulate queries.
 The filters on the left side are Blizzard filters which may reduce the number of pages to be scanned and those on the right side are post filters which do not affect the scan time but can be combined with logical operators to formulate very complex filters.
+
 ### Post
+
 ![Alt text](http://i.imgur.com/otzOT2I.png)
+
 - When entering prices **g**, **s** and **c** denote gold, silver and copper respectively.
 - A price value without explicit denotations will count as gold. (e.g., 10.5 = 10g50s)
 - Price values can contain decimals. (e.g., 1.5g = 1g50s)
@@ -104,12 +135,15 @@ The filters on the left side are Blizzard filters which may reduce the number of
 - Double-click in the bids/buyouts listings will also match the stack size.
 
 ### Auctions
+
 ![Alt text](http://i.imgur.com/6HjaIo2.png)
 
 ### Bids
+
 ![Alt text](http://i.imgur.com/NOjPKNW.png)
 
 ## Search Filters
+
 AddOns do not have any additional Blizzard filters available to them beyond the ones in the default auction house interface, nor do they have any other ways to combine them.
 Of course it is possible for an addOn to apply arbitrary filters after the Blizzard query but only the Blizzard query will affect the number of pages to be scanned and thus the time it takes for a scan.
 Since the Vanilla API will only let you request a page every 4 seconds having no Blizzard query in your filter can lead to very long scan times.
