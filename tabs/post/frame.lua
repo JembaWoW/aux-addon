@@ -60,7 +60,21 @@ do
 		f,
 	    function()
 	        if arg1 == 'LeftButton' then
-	            update_item(this.item_record)
+                -- ctrl posts items
+	            if IsControlKeyDown() then
+                    update_item(this.item_record)
+                    post_auctions()
+                -- shift hides items
+                elseif IsShiftKeyDown() then
+                    update_item(this.item_record)
+	                local settings = read_settings()
+                    settings.hidden = not settings.hidden
+                    write_settings(settings)
+                    refresh = true
+                    update_item(this.item_record)
+	            else
+	                update_item(this.item_record)
+	            end
 	        elseif arg1 == 'RightButton' then
 	            aux.set_tab(1)
 	            search_tab.set_filter(strlower(info.item(this.item_record.item_id).name) .. '/exact')

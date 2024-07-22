@@ -59,7 +59,6 @@ function handle.LOAD()
         crafting_cost = true,
         post_bid = false,
         post_duration = post.DURATION_24,
-		post_stack = true,
         items = {},
         item_ids = {},
         auctionable_items = {},
@@ -93,9 +92,6 @@ end
 
 function handle.LOAD2()
     local key = format('%s|%s', GetCVar'realmName', UnitFactionGroup'player')
-	if GetCVar'realmName' == 'Nordanaar' then
-		key = format('%s|%s', GetCVar'realmName', 'Horde')
-	end
     aux.faction[key] = aux.faction[key] or {}
     M.faction_data = assign(aux.faction[key], {
         history = {},
@@ -196,7 +192,7 @@ end
 function AUCTION_HOUSE_SHOW()
 	AuctionFrame:Hide()
 	frame:Show()
-	set_tab(1)
+	set_tab(2)
 end
 
 do
