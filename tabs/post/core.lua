@@ -387,7 +387,6 @@ end
 
 function update_item(item)
 
-print("this triggered for: "..item.name)
     local settings = read_settings(item.key)
 
     item.unit_vendor_price = unit_vendor_price(item.key)
