@@ -1,10 +1,10 @@
-# aux - WoW 1.12 AddOn (Nyctermoon Edition)
+# aux - WoW 1.12 AddOn (Microbot WoW Edition)
 
 The most advanced auction house addOn for the 1.12 client with some features more advanced than anything even on retail.
 
-Enhanced features added for the Nyctermoon private server: On Nyctermoon, a custom Marketer script will buy any item at white or better quality for 2x the vendor price if listed for 24 hours on the AH, which is the primary way to make gold on the server. These changes add some quality of life features by building on the default tweaked Aux addon posted in the Nyctermoon discord server so that it's easier to quickly post items from your inventory for the 2x vendor default (which is what all items are initially set at) and to hide or unhide items from the posting list.
+Enhanced features added for the Microbot WoW private server: On Microbot WoW, a custom Marketer script will buy any item at white or better quality for 2x the vendor price if listed for 24 hours on the AH, which is the primary way to make gold on the server. These changes add some quality of life features by building on the default tweaked Aux addon posted in the Microbot WoW discord server so that it's easier to quickly post items from your inventory for the 2x vendor default (which is what all items are initially set at) and to hide or unhide items from the posting list.
 
-## Custom Added Features for Nyctermoon
+## Custom Added Features for Microbot WoW
 
 - **Ctrl + Left Click** on an item in the posting list will post it with default 2x vendor price settings for 24hr auction time.
 - **Shift + Left Click** on an item in the posting list will hide or unhide it.
